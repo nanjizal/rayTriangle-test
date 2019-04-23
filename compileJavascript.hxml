@@ -2,7 +2,7 @@
 -cp src
 -main rayTriangle.PerfTest
 -dce full
-# switch between abstract and class and abstract and typedef
+# switch between 'abstract and class' AND 'abstract and typedef'
 -D avoid_typedef
 -js perfTest.js
 -cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="perfTest.js"></script></body></html>' >index.html
