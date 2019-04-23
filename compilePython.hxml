@@ -1,0 +1,10 @@
+#    python test ( very slow adjust iterations befor running !! )
+-cp src
+-main rayTriangle.PerfTest
+-dce full
+# switch between abstract and class and abstract and typedef
+-D avoid_typedef
+
+-python perfTest.py
+--next
+-cmd python perfTest.py

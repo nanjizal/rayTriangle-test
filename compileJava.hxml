@@ -1,0 +1,9 @@
+--next
+##   java test
+-cp src
+-main rayTriangle.PerfTest
+-dce full
+# switch between abstract and class and abstract and typedef
+-D avoid_typedef
+-java perfTest
+-cmd java -jar perfTest/PerfTest.jar

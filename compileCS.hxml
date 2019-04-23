@@ -1,0 +1,10 @@
+#    cpp test
+-cp src
+-main rayTriangle.PerfTest
+-dce full
+# switch between abstract and class and abstract and typedef
+-D avoid_typedef
+
+-cs perfTest
+#--next
+-cmd mono perfTest/bin/PerfTest.exe
