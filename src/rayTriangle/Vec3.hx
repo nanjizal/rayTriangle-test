@@ -5,7 +5,7 @@ class V3 {
     public var x: Float;
     public var y: Float;
     public var z: Float; 
-    private
+    //private
     function new( x: Float, y: Float, z: Float ){
         this.x = x;
         this.y = y;
@@ -21,15 +21,22 @@ typedef V3 = {
 #end
 @:forward
 abstract Vec3( V3 ) from V3 to V3 {
-    public new( v: V3 ) {
+    public inline
+    function new( v: V3 ){
         this = v;
+    }
+    public static inline
+    function zero(){
+        return new Vec3({ x: 0.
+                        , y: 0.
+                        , z: 0. });
     }
     @:op(A - B)
     public static inline
     function subtract( a: Vec3, b: Vec3 ): Vec3 {
-            return new Vec3({ x: a.x - b.x
-                            , y: a.y - b.y
-                            , z: a.z - b.z });
+        return new Vec3({ x: a.x - b.x
+                        , y: a.y - b.y
+                        , z: a.z - b.z });
     }
     public inline
     function dot( v: Vec3 ): Float{
@@ -49,7 +56,9 @@ abstract Vec3( V3 ) from V3 to V3 {
     public inline
     function normalize(): Vec3 {
         var len = length();
-        return new Vec3( { x: this.x/len, this.y: y/len, z: this.z/len } );
+        return new Vec3( { x: this.x/len
+                         , y: this.y/len
+                         , z: this.z/len } );
     }
     public inline
     function toString(): String {
