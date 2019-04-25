@@ -2,6 +2,7 @@
 -cp src
 -main rayTriangle.PerfTest
 -dce full
+-D analyzer-optimize
 # switch between 'abstract and class' AND 'abstract and typedef'
 -D avoid_typedef
 -js perfTest.js
